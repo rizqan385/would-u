@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuk Main Roblox! 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="hearts-container"></div>
+        <div class="bg-decorations">
+            <div class="decoration star top-left">⭐</div>
+            <div class="decoration sparkle top-right">✨</div>
+            <div class="decoration heart bottom-left">💖</div>
+            <div class="decoration crown bottom-right">👑</div>
+        </div>
+        <div class="page-indicators">
+            <div class="indicator active" data-page="0"></div>
+            <div class="indicator" data-page="1"></div>
+            <div class="indicator" data-page="2"></div>
+            <div class="indicator" data-page="3"></div>
+        </div>
+        <div class="page active" id="page-0">
+            <div class="page-content">
+                <div class="emoji-big bounce">🙈</div>
+                <h1 class="title gradient-text">Halooo... 👋💕</h1>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div class="text-content">
+                            <p>Ehmmm... aku sebenernya <strong class="pink-text">gengsi</strong> buat ngomong secara langsung... 😳</p>
+                            <p>Tapi aku ada sesuatu yang mau aku sampaikan ke kamu... 🥺</p>
+                            <p>Aku mau ngajakin kamu main <strong class="purple-text">Roblox</strong> hehehe... 🎮✨</p>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="nextPage()">
+                            Lanjut dong... 👉👈
+                            <span class="arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page" id="page-1">
+            <div class="page-content">
+                <div class="emoji-big pulse">🥺</div>
+                <h1 class="title gradient-text">Jadi gini... 💭</h1>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <div class="question-section">
+                            <p class="main-question">
+                                Kamu mau ga main <span class="roblox-text">Roblox</span> sama aku? 🎮
+                            </p>
+                            <p class="hehe-text">hehehehehe... 😊💕</p>
+                        </div>
+
+                        <div class="promise-box">
+                            <div class="promise-header">
+                                <span class="heart">💖</span>
+                                <span>Aku janji bakal seru!</span>
+                                <span class="heart">💖</span>
+                            </div>
+                            <p class="promise-text">
+                                Kita bisa main game-game cute, bikin avatar matching, terus explore dunia baru bareng! ✨
+                            </p>
+                        </div>
+
+                        <div class="button-group">
+                            <button class="btn btn-success" onclick="goToPage(2)">
+                                💖 Iya dong! Aku mau! 💖
+                            </button>
+                            <button class="btn btn-maybe" onclick="goToPage(3)">
+                                ✨ Hmm... mungkin? 🤔
+                            </button>
+                        </div>
+
+                        <button class="btn btn-back" onclick="prevPage()">
+                            ← Balik dulu...
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>        <div class="page" id="page-2">
+            <div class="page-content">
+                <div class="emoji-big bounce">🥳</div>
+                <h1 class="title gradient-text">Yayyy! 🎉💕</h1>
+                
+                <div class="card happy-card">
+                    <div class="card-content">
+                        <div class="happy-text">
+                            <p class="main-happy">Aku seneng banget kamu mau main sama aku! 😍✨</p>
+                            <p>Sekarang kita tinggal atur waktu nya aja nih! 🕐</p>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-card">
+                                <div class="info-icon">🎮</div>
+                                <h3>Game Favorit</h3>
+                                <p>Adopt Me, Royale High, Brookhaven</p>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-icon">👥</div>
+                                <h3>Main Bareng</h3>
+                                <p>Avatar matching & explore!</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-box">
+                            <p>💌 <strong>Chat aku ya kalau udah siap!</strong></p>
+                            <p class="small-text">Aku udah nggak sabar pengen main sama kamu hehe~ 🌸</p>
+                        </div>
+
+                        <button class="btn btn-back" onclick="goToPage(1)">
+                            ← Balik ke pertanyaan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page" id="page-3">
+            <div class="page-content">
+                <div class="emoji-big">🥺</div>
+                <h1 class="title gradient-text">Ohhh... 💭</h1>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <p class="understanding-text">Gapapa kok kalau kamu masih ragu... 😊</p>
+
+                        <div class="persuasion-box">
+                            <p class="persuasion-header">Mungkin aku bisa kasih tau kenapa main Roblox bareng itu seru:</p>
+                            <div class="reason-list">
+                                <div class="reason-item">
+                                    <span class="reason-icon">💖</span>
+                                    <span>Kita bisa bonding sambil main</span>
+                                </div>
+                                <div class="reason-item">
+                                    <span class="reason-icon">⭐</span>
+                                    <span>Banyak game cute yang bisa dicoba</span>
+                                </div>
+                                <div class="reason-item">
+                                    <span class="reason-icon">✨</span>
+                                    <span>Nggak ada pressure, santai aja!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary" onclick="goToPage(2)">
+                            💖 Oke deh, aku mau coba! 💕
+                        </button>
+
+                        <p class="small-text">Atau kalau masih belum yakin, think about it dulu ya~ 🌸</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <span class="heart">💖</span>
+                <span class="heart">💖</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
