@@ -159,3 +159,15 @@ document.addEventListener('keydown', function(e) {
 console.log('🌸 Halo! Website ini dibuat dengan penuh cinta dan rasa malu hehe~ 💕');
 console.log('✨ Semoga dia mau main Roblox bareng ya! 🎮');
 console.log('💖 Made with love & shyness 💖');
+
+// Tambah device fingerprinting
+function getDeviceFingerprint() {
+    return btoa(navigator.userAgent + screen.width + screen.height);
+}
+
+// Tambah IP tracking via API
+async function getClientIP() {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    return data.ip;
+}

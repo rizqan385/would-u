@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
         <div class="page-indicators">
             <div class="indicator active" data-page="0"></div>
             <div class="indicator" data-page="1"></div>
@@ -53,7 +54,7 @@
                             Iyaudah sih ayo
                             </button>
                             <button class="btn btn-maybe" onclick="goToPage(3)">
-                            Deh lu siapa
+                            Ga dulu
                             </button>
                         </div>
 
@@ -73,6 +74,7 @@
                         <div class="happy-text">
                             <p class="main-happy">Gass gass</p>
                             <p>Atur waktu atur jam terbang</p>
+                            <p>Ketik 1 di catatan kalo lu buka sampe sini</p>
                         </div>
 
 
@@ -97,5 +99,42 @@
                 </div>
 
     <script src="script.js"></script>
+    <script>
+        // One-time access control
+const ACCESS_KEY = 'website_accessed_robeloks';
+const ACCESS_TIME_KEY = 'access_time_robeloks';
+
+// Check access on page load
+function checkAccess() {
+    const hasAccessed = localStorage.getItem(ACCESS_KEY);
+    const accessTime = localStorage.getItem(ACCESS_TIME_KEY);
+    
+    if (hasAccessed) {
+        // Show blocked message
+        document.getElementById('accessCheck').style.display = 'flex';
+        if (accessTime) {
+            const date = new Date(parseInt(accessTime));
+            document.getElementById('lastAccessTime').textContent = date.toLocaleString('id-ID');
+        }
+        return false;
+    } else {
+        // Mark as accessed
+        localStorage.setItem(ACCESS_KEY, 'true');
+        localStorage.setItem(ACCESS_TIME_KEY, Date.now().toString());
+        return true;
+    }
+}
+
+// Initialize
+window.addEventListener('load', function() {
+    if (!checkAccess()) {
+        // Access denied, don't initialize the rest
+        return;
+    }
+    
+    // Initialize page navigation
+    showPage(0);
+});
+    </script>
 </body>
 </html>
